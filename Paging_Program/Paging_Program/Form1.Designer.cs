@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,8 +45,24 @@
             this.btnGetPages = new System.Windows.Forms.Button();
             this.ASCB = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Pb_clock = new System.Windows.Forms.PictureBox();
+            this.btn_Start = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblF0 = new System.Windows.Forms.Label();
+            this.lblF3 = new System.Windows.Forms.Label();
+            this.lblF6 = new System.Windows.Forms.Label();
+            this.lblF9 = new System.Windows.Forms.Label();
+            this.lblF1 = new System.Windows.Forms.Label();
+            this.lblF2 = new System.Windows.Forms.Label();
+            this.lblF4 = new System.Windows.Forms.Label();
+            this.lblF5 = new System.Windows.Forms.Label();
+            this.lblF7 = new System.Windows.Forms.Label();
+            this.lblF8 = new System.Windows.Forms.Label();
+            this.lblF10 = new System.Windows.Forms.Label();
+            this.lblF11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ASUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHDD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb_clock)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -119,11 +136,6 @@
             // ASUD
             // 
             this.ASUD.Location = new System.Drawing.Point(39, 119);
-            this.ASUD.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
             this.ASUD.Minimum = new decimal(new int[] {
             1,
             0,
@@ -226,11 +238,156 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Pb_clock
+            // 
+            this.Pb_clock.Location = new System.Drawing.Point(313, 169);
+            this.Pb_clock.Name = "Pb_clock";
+            this.Pb_clock.Size = new System.Drawing.Size(270, 250);
+            this.Pb_clock.TabIndex = 18;
+            this.Pb_clock.TabStop = false;
+            // 
+            // btn_Start
+            // 
+            this.btn_Start.Location = new System.Drawing.Point(346, 489);
+            this.btn_Start.Name = "btn_Start";
+            this.btn_Start.Size = new System.Drawing.Size(200, 59);
+            this.btn_Start.TabIndex = 19;
+            this.btn_Start.Text = "Start Paging Replacement";
+            this.btn_Start.UseVisualStyleBackColor = true;
+            this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblF0
+            // 
+            this.lblF0.AutoSize = true;
+            this.lblF0.Location = new System.Drawing.Point(421, 147);
+            this.lblF0.Name = "lblF0";
+            this.lblF0.Size = new System.Drawing.Size(47, 17);
+            this.lblF0.TabIndex = 20;
+            this.lblF0.Text = "Empty";
+            // 
+            // lblF3
+            // 
+            this.lblF3.AutoSize = true;
+            this.lblF3.Location = new System.Drawing.Point(577, 285);
+            this.lblF3.Name = "lblF3";
+            this.lblF3.Size = new System.Drawing.Size(47, 17);
+            this.lblF3.TabIndex = 21;
+            this.lblF3.Text = "Empty";
+            // 
+            // lblF6
+            // 
+            this.lblF6.AutoSize = true;
+            this.lblF6.Location = new System.Drawing.Point(421, 427);
+            this.lblF6.Name = "lblF6";
+            this.lblF6.Size = new System.Drawing.Size(47, 17);
+            this.lblF6.TabIndex = 22;
+            this.lblF6.Text = "Empty";
+            // 
+            // lblF9
+            // 
+            this.lblF9.AutoSize = true;
+            this.lblF9.Location = new System.Drawing.Point(260, 285);
+            this.lblF9.Name = "lblF9";
+            this.lblF9.Size = new System.Drawing.Size(47, 17);
+            this.lblF9.TabIndex = 23;
+            this.lblF9.Text = "Empty";
+            // 
+            // lblF1
+            // 
+            this.lblF1.AutoSize = true;
+            this.lblF1.Location = new System.Drawing.Point(499, 157);
+            this.lblF1.Name = "lblF1";
+            this.lblF1.Size = new System.Drawing.Size(47, 17);
+            this.lblF1.TabIndex = 24;
+            this.lblF1.Text = "Empty";
+            // 
+            // lblF2
+            // 
+            this.lblF2.AutoSize = true;
+            this.lblF2.Location = new System.Drawing.Point(577, 218);
+            this.lblF2.Name = "lblF2";
+            this.lblF2.Size = new System.Drawing.Size(47, 17);
+            this.lblF2.TabIndex = 25;
+            this.lblF2.Text = "Empty";
+            // 
+            // lblF4
+            // 
+            this.lblF4.AutoSize = true;
+            this.lblF4.Location = new System.Drawing.Point(577, 346);
+            this.lblF4.Name = "lblF4";
+            this.lblF4.Size = new System.Drawing.Size(47, 17);
+            this.lblF4.TabIndex = 26;
+            this.lblF4.Text = "Empty";
+            // 
+            // lblF5
+            // 
+            this.lblF5.AutoSize = true;
+            this.lblF5.Location = new System.Drawing.Point(510, 422);
+            this.lblF5.Name = "lblF5";
+            this.lblF5.Size = new System.Drawing.Size(47, 17);
+            this.lblF5.TabIndex = 27;
+            this.lblF5.Text = "Empty";
+            // 
+            // lblF7
+            // 
+            this.lblF7.AutoSize = true;
+            this.lblF7.Location = new System.Drawing.Point(343, 422);
+            this.lblF7.Name = "lblF7";
+            this.lblF7.Size = new System.Drawing.Size(47, 17);
+            this.lblF7.TabIndex = 28;
+            this.lblF7.Text = "Empty";
+            // 
+            // lblF8
+            // 
+            this.lblF8.AutoSize = true;
+            this.lblF8.Location = new System.Drawing.Point(276, 356);
+            this.lblF8.Name = "lblF8";
+            this.lblF8.Size = new System.Drawing.Size(47, 17);
+            this.lblF8.TabIndex = 29;
+            this.lblF8.Text = "Empty";
+            // 
+            // lblF10
+            // 
+            this.lblF10.AutoSize = true;
+            this.lblF10.Location = new System.Drawing.Point(276, 218);
+            this.lblF10.Name = "lblF10";
+            this.lblF10.Size = new System.Drawing.Size(47, 17);
+            this.lblF10.TabIndex = 30;
+            this.lblF10.Text = "Empty";
+            // 
+            // lblF11
+            // 
+            this.lblF11.AutoSize = true;
+            this.lblF11.Location = new System.Drawing.Point(343, 157);
+            this.lblF11.Name = "lblF11";
+            this.lblF11.Size = new System.Drawing.Size(47, 17);
+            this.lblF11.TabIndex = 31;
+            this.lblF11.Text = "Empty";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 498);
+            this.ClientSize = new System.Drawing.Size(884, 560);
+            this.Controls.Add(this.lblF11);
+            this.Controls.Add(this.lblF10);
+            this.Controls.Add(this.lblF8);
+            this.Controls.Add(this.lblF7);
+            this.Controls.Add(this.lblF5);
+            this.Controls.Add(this.lblF4);
+            this.Controls.Add(this.lblF2);
+            this.Controls.Add(this.lblF1);
+            this.Controls.Add(this.lblF9);
+            this.Controls.Add(this.lblF6);
+            this.Controls.Add(this.lblF3);
+            this.Controls.Add(this.lblF0);
+            this.Controls.Add(this.btn_Start);
+            this.Controls.Add(this.Pb_clock);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ASCB);
             this.Controls.Add(this.btnGetPages);
@@ -252,6 +409,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ASUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHDD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb_clock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +433,21 @@
         private System.Windows.Forms.Button btnGetPages;
         private System.Windows.Forms.ComboBox ASCB;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox Pb_clock;
+        private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblF0;
+        private System.Windows.Forms.Label lblF3;
+        private System.Windows.Forms.Label lblF6;
+        private System.Windows.Forms.Label lblF9;
+        private System.Windows.Forms.Label lblF1;
+        private System.Windows.Forms.Label lblF2;
+        private System.Windows.Forms.Label lblF4;
+        private System.Windows.Forms.Label lblF5;
+        private System.Windows.Forms.Label lblF7;
+        private System.Windows.Forms.Label lblF8;
+        private System.Windows.Forms.Label lblF10;
+        private System.Windows.Forms.Label lblF11;
     }
 }
 
